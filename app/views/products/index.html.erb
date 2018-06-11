@@ -16,8 +16,6 @@ $(function(){
       $("#description-"+id).text(data);
     });
     
-    debugger;
-    
     $.get("/products/"+id+"/inventory", function(data){
       const invStr = ( data === "true" ? "Available" : "Sold Out" );
       $("#description-"+id).append("<br/>Inventory: "+invStr);
