@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   end
   
   def description
+    binding.pry
     render :plain => @product.description
   end
   
